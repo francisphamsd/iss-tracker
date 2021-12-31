@@ -10,7 +10,7 @@ tiles.addTo(map);
 // Get marker
 
 const issIcon = L.icon({
-  iconUrl: "../img/iss-icon.png",
+  iconUrl: "./src/img/iss-icon.png",
   iconSize: [50, 50],
   iconAnchor: [25, 25],
 });
