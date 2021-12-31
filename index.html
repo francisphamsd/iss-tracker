@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <title>ISS tracker</title>
+  </head>
+  <body>
+    <div class="container grid">
+      <div class="logo">
+        <img class="logo__img" src="./img/logo-iss.png" alt="" />
+        <img class="logo__img" src="./img/logo-tracker.png" alt="" />
+      </div>
+      <div class="box live-view">
+        <h3 class="box__title">Live view</h3>
+        <div class="box__container youtube-container">
+          <iframe
+            class="youtube-video"
+            src="https://www.youtube.com/embed/XBPjVzSoepo"
+            allow="autoplay;"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="box world-map">
+        <h3 class="box__title">World map</h3>
+        <div class="box__container" id="map"></div>
+        <div class="box__follow-switch">
+          <input type="checkbox" id="follow" name="follow" unchecked />
+          <label for="follow">Follow I.S.S</label>
+        </div>
+      </div>
+      <div class="box statistic">
+        <h3 class="box__title">Statistic</h3>
+        <div class="box__container statistic__container">
+          <p class="box__text">Latitude: <span id="lat"></span>&deg;</p>
+          <p class="box__text">Longitude: <span id="lon"></span>&deg;</p>
+          <p class="box__text">Velocity: <span id="vel"></span> mph</p>
+          <p class="box__text">Altitude: <span id="alt"></span> miles</p>
+        </div>
+      </div>
+    </div>
+    <script src="./javascript/main.js"></script>
+  </body>
+</html>
